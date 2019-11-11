@@ -10,11 +10,14 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
+   @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
+   @import url(https://fonts.googleapis.com/css?family=Oswald:400|Raleway:400,700,400italic,700italic);
+   
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /*
@@ -283,35 +286,26 @@ body {
 body {
     background-color: #ffffff;
     color: #000000;
-    font: 16px/1.25 "Times New Roman",Times,serif;;
+    font: 16px/1.25 "Times New Roman",Times,serif;
+
+
+    background-color: #fff;
 }
 
-h1 {
-    font-family: "Times New Roman",Times,serif;;
-    text-align: center;
-}
+
 
 a {
   text-decoration: none;
   color: #060606;
   
 }
-
 a:hover {
     color: #83e4e2;
     text-decoration: none;
 }
-
-/* .container {
-    margin: 0 auto;
-    max-width: 80em;
-    /* border-bottom: 1px solid #EAEAEB; */
-    /* text-align: right; */
-    /* height: 70px; */
-    /* line-height: 70px; */
-} */
-.overlay{
-  margin: 0 30px 0 0;
+.container{
+  margin: 0 auto;
+  max-width: 80em;
 }
 
 main .container {
@@ -346,6 +340,43 @@ nav {
     top: 0;
     width: 100%;
     z-index: 9999;
+}
+
+/*** INPUT ***/
+nav input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/*** LABEL ***/
+nav label {
+  display: none;
+  cursor: pointer;
+  /* display: block; */
+  font: 2em/1 'Raleway', sans-serif;
+  padding: 0.5em;
+}
+
+
+@media only screen and (max-width: 750px){
+  nav label{
+    display: block;
+    cursor: pointer;
+  }
+  .menu{
+    text-align: center;
+    /* width: 100%; */
+    display: none;
+    }
+  .navitem{
+    display: block;
+    border-bottom: 1px solid #EAEAEB;
+    margin: 0;
+  }
+  #toggle:checked + .menu {
+    display: block;
+  }
 }
 
 /* Hamburger Icon */
@@ -413,6 +444,7 @@ nav input:checked ~ #overlay {
     top: 0;
     width: 100vw;
     z-index: -1;
+    /* margin: 0 30px 0 0; */
 }
 
 /* List */
@@ -457,42 +489,9 @@ nav ul#social-media > li {
 }
 
 
-/*** INPUT ***/
-nav input {
-  opacity: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-/*** LABEL ***/
-nav label {
-  display: none;
-  cursor: pointer;
-  /* display: block; */
-  font: 2em/1 "Times New Roman",Times,serif;;
-  padding: 0.5em;
-}
+/************************************************/
 
 
-@media only screen and (max-width: 1000px){
-  nav label{
-    display: block;
-    cursor: pointer;
-  }
-  .menu{
-    text-align: center;
-    /* width: 100%; */
-    display: none;
-    }
-  .navitem{
-    display: block;
-    border-bottom: 1px solid #EAEAEB;
-    margin: 0;
-  }
-  #toggle:checked + .menu {
-    display: block;
-  }
-}
 
 
 #pageName{
@@ -506,13 +505,10 @@ h1{
   font-size: 22px;
 }
 
-menu{
-  text-decoration: none;
-}
-
 #tracks{
   padding: 100px;
   border-radius: 10px;
+  width: 100%;
 }
 
 
@@ -572,4 +568,87 @@ label{
   ;
   background: rgb(241, 99, 38);
   color: rgb(2, 70, 144);
+}
+
+#aboutme{
+  display: block;
+  text-align: left;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+  border-radius: 10px;
+  font: 2em/1 "Times New Roman",Times,serif;;
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+/*about me*/
+.sqs-block-html .sqs-block-content *:not(h1):not(h2):not(h3) {
+  font-size: 18px;
+  word-wrap: break-word;
+  padding: 1%;
+}
+
+@media screen and (max-width: 768px){
+  .sqs-block-content p {
+      font-size: 18px;
+      line-height: 1.7em;
+  }
+  p {
+    margin-top: 1.25em;
+    margin-bottom: 1.6em;
+  }
+  p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  
+  main{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+  }
+}
+
+p {
+  margin-top: 1.25em;
+  margin-bottom: 1.6em;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+#aboutme{
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 10%;
+  margin-right: 20px;
+  text-align: left;
+}
+
+#contact{
+  text-align: left;
 }
