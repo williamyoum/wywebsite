@@ -61,7 +61,6 @@ hr {
 
 audio,
 canvas,
-iframe,
 img,
 svg,
 video {
@@ -510,8 +509,6 @@ nav ul#social-media > li {
 /************************************************/
 
 
-
-
 #pageName{
   font: 2em/1 "Times New Roman",Times,serif;;
   text-align: center;
@@ -522,19 +519,12 @@ h1{
   text-align: center;
   font-size: 22px;
 }
-/* 
-#tracks{
-  padding-left: 10%;
-  padding-right: 10%;
-  display: flex;
-  margin-bottom: 25px;
-} */
 
-#track-container{
-  padding-left: 10%;
-  padding-right: 10%;
-  display: flex;
-  margin-bottom: 25px;
+#tracks{
+  padding: 100px;
+  width: 100%;
+  /* display: flex; */
+  /* margin-bottom: 25px; */
 }
 
 
@@ -751,6 +741,3 @@ main{
 *, *::after, *::before {
   box-sizing: border-box;
 }
-
-
-
