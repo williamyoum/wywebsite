@@ -1,0 +1,22 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamyoum/wywebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamyoum/wywebsite/issues"
+  },
+  "homepage": "https://williamyoum.github.io/wywebsite",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
