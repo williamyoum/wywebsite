@@ -329,14 +329,14 @@ a:hover {
     color: #83e4e2;
     text-decoration: none;
 }
-.container{
+.container-menu{
   margin: 0 auto;
   max-width: 80em;
 }
-
+/* 
 main .container {
     padding: 1em;
-}
+} */
 
 p {
     margin-left: auto;
@@ -1041,27 +1041,28 @@ img{
 
 /* The sidebar menu */
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 200px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #000000;
+  overflow-x: hidden;
   padding-top: 20px;
-}
-
+  /* margin-top: 50px; */
+  }
 /* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 18pt;
+  color: rgb(167, 167, 167);
   display: block;
-  line-height: 40pt;
-}
-
+  line-height: 30pt;
+  text-align: center;
+  /* margin-top: 50px; */
+  }
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
@@ -1105,4 +1106,10 @@ img{
   font-style: italic;
   font-family: 'Clarkson',Helvetica,sans-serif;
 
+}
+
+
+
+.sidenav-container{
+  margin-top: 40%;
 }
