@@ -279,8 +279,6 @@ textarea {
 
 
 
-
-
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400|Raleway:400,700,400italic,700italic);
 
@@ -299,6 +297,7 @@ body {
 }
 
 body {
+  
     background-color: #ffffff;
     color: #000000;
     color: #222;
@@ -362,8 +361,8 @@ p {
 nav {
     color: #1d1f20;
     left: 0;
-    position: relative;
-    top: 0;
+    position: fixed;
+    top: 80px;
     width: 100%;
     z-index: 9999;
 }
@@ -380,18 +379,17 @@ nav label {
   display: none;
   cursor: pointer;
   /* display: block; */
-  color: #222;
-  font-size: 1em/2;
+  color: rgb(138, 138, 138);
+  font-size: 2em;
 
   font-family: 'Clarkson',Helvetica,sans-serif;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* padding: 0.5em; */
+  /* -moz-osx-font-smoothing: grayscale; */
 }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 900px){
   nav label{
     display: block;
     cursor: pointer;
@@ -411,7 +409,7 @@ nav label {
   }
 
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 900px){
   .sqs-block-content p {
     font-size: 18px;
     line-height: 1.7em;
@@ -442,7 +440,7 @@ nav label {
 }
 
 nav label #menu-icon {
-    float: right;
+    float: none;
 }
 
 #menu-icon:before,
@@ -480,62 +478,58 @@ nav input[type=checkbox]:checked + label #menu-icon:after {
 /* Overlay */
 nav input:checked ~ #overlay {
     background: #565656;
-    opacity: 0.9;
+    opacity: 0.93;
     bottom: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     right: 0;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: -1;
     /* margin: 0 30px 0 0; */
 }
 
 /* List */
 nav ul {
-    font-size: 1.5em;
-    font:  "Times New Roman",Times,serif;
-
-    line-height: 1.4;
-  
-  
-    font-family: 'Clarkson',Helvetica,sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    /* line-height: 1em; */
-    letter-spacing: 0;
-    text-rendering: geometricPrecision;
-    text-transform: none;
-    text-decoration: none;
-    /* font-size: 15px; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    
-    
-    list-style: none;
-    margin: 0;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0;
-    text-align: center;
-}
-
+  font-size: 1.2em;
+  /* line-height: 1.4; */
+  /* font-family: 'Clarkson',Helvetica,sans-serif; */
+  /* font-style: normal; */
+  /* font-weight: 500; */
+  line-height: 0.1em;
+  letter-spacing: 0;
+  text-rendering: geometricPrecision;
+  text-transform: none;
+  text-decoration: none;
+  /* font-size: 15px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  /* opacity: 0; */
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  display: inline-grid;
+  }
 nav input:checked ~ ul {
-    margin: 1em;
+    margin: 3em;
     max-height: inherit;
     opacity: 1;
 }
 
 nav ul > li {
     margin: 0.5em 0;
+
 }
 
 
 nav ul a {
   color: #ffffff!important;
-    text-decoration: none;
+  text-decoration: none;
+
 }
 
 nav ul a:hover {
@@ -578,10 +572,19 @@ h1{
 }
 
 #tracks{
-  padding: 100px;
+  position: relative;
+  max-width: 70%;
   width: 100%;
-  /* display: flex; */
-  /* margin-bottom: 25px; */
+  margin: 0 0 0 20%;
+}
+
+@media only screen and (max-width: 900px){
+  #tracks{
+    position: relative;
+    max-width: 70%;
+    width: 100%;
+    margin: 15% 0 0 15%;
+  }
 }
 
 
@@ -593,7 +596,7 @@ h1{
 .nav{ 
   border-bottom:1px solid #EAEAEB;
   text-align: right;
-  height: 70px;
+  height: 100px;
   line-height: 70px;
   /* display: inline-block; */
 }
@@ -602,6 +605,7 @@ h1{
   /* position: fixed; */
 }
 .menu a{
+  clear: right;
   text-decoration: none;
   color: gray;
   margin: 0 10px;
@@ -612,6 +616,9 @@ label{
   margin: 0 40px 0 0;
   font-size: 22px;
   display: none;
+  width: 40px;
+  float: right;
+
 }
 #toggle{
   display: none;
@@ -628,31 +635,22 @@ label{
 }
 
 #description{
-  display: block;
+  /* display: block; */
   text-align: left;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 100px;
-  border-radius: 2px;
-
+  font-weight: bold;
   font-family: 'Clarkson',Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1em;
-  letter-spacing: 0;
-  text-rendering: geometricPrecision;
-  text-transform: none;
-  text-decoration: none;
-  font-size: 15px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: rgb(238, 238, 238);
-  /* color: rgb(238, 241, 41); */
-  -webkit-box-align: center;
+  margin: 100px 20% 0 25%;
+  max-width: 700px;
+  width: 50%;
+}
+
+
+#description p{
+  /* display: block; */
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Clarkson',Helvetica,sans-serif;
+  /* margin: 100px 20% 0 20%; */
 }
 
 #aboutme{
@@ -693,17 +691,39 @@ label{
 
 /*about me*/
 .sqs-block-html .sqs-block-content *:not(h1):not(h2):not(h3) {
-  /* font-size: 18px; */
+  font-size: 13pt;
   padding-bottom: 1em;
-}
+  }
 
 .sqs-block-content #contact{
-  /* text-align: center; */
-  /* display: flex; */
+  text-align: left;
+  /* display: inline-block; */
+}
+
+.sqs-block-content p{
+  line-height: 30px;
+  font-size: 18pt;
+  font-family: 'Clarkson',Helvetica,sans-serif;
+
+}
+
+.sqs-block-content h2{
+  text-transform: uppercase;
+  line-height: 30px;
+  font-size: 18pt;
+  font-family: 'Clarkson',Helvetica,sans-serif;
+
+}
+
+.sqs-block-content a{
+  display: block;
+  font-style: italic;
+  font-family: 'Clarkson',Helvetica,sans-serif;
+
 }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 900px){
   p {
     margin-top: 1.25em;
     margin-bottom: 1.6em;
@@ -774,16 +794,16 @@ footer{
 }
 
 .work-section{
-  width: 90%;
+  /* width: 90%; */
   /* vertical-align: middle; */
-  margin-bottom: 5em;
-  text-align: center;
-  margin: auto;
+  /* margin-bottom: 5em;
+  text-align: center; */
+  /* margin: auto;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  height: 200px;
+  left: 0; */
+  /* height: 200px; */
 }
 
 
@@ -940,3 +960,149 @@ img{
   display: flex;
 }
 
+
+.intro-section{
+  margin-top: 100px;
+  margin-left: 10%;
+  display: block;
+  max-width: 80%;
+  float: right;
+}
+
+.intro-content{
+  font-family: 'Clarkson',Helvetica,sans-serif;
+  line-height: 30pt;
+  text-align: left;
+  max-width: 80%;
+  
+}
+
+.intro-content p{
+  font-weight: bold;
+  font-size: 28pt;
+  max-width: 80%;
+}
+
+.me{
+  font-family: 'Clarkson',Helvetica,sans-serif;
+  font-size: 30pt;
+  line-height: 24pt;
+  text-align: left;
+  font-weight: bold;
+}
+
+.me-image{
+  max-width: 500px;
+  height: 100%;
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.me-name{
+  display: block;
+  position: static;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+  .me-name{
+      display: none;
+  }
+}
+
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 100px;
+  position: static;
+  margin-top: 40px;
+}
+
+.logo-top{
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  .logo-top{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 100px;
+    position: static;
+    margin-top: 40px;
+  }
+}
+
+
+
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  line-height: 40pt;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.body {
+  margin-left: 200px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .sidenav {display:none}
+  .sidenav a {display:none}
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+.sqs-block-content-work p{
+  line-height: 15pt;
+  font-size: 18pt;
+  font-family: 'Clarkson',Helvetica,sans-serif;
+
+}
+
+.sqs-block-content-work h2{
+  text-transform: uppercase;
+  line-height: 30px;
+  font-size: 18pt;
+  font-family: 'Clarkson',Helvetica,sans-serif;
+
+}
+
+.sqs-block-content-work a{
+  display: block;
+  font-style: italic;
+  font-family: 'Clarkson',Helvetica,sans-serif;
+
+}
