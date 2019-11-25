@@ -890,11 +890,11 @@ main{
 /* relevant styles */
 .work-image-container-small{
   /* position: relative; */
-  height: auto;
+  /* height: auto;
   width: auto;
   max-width: 50%;
   max-height: 50%;
-  display: block;
+  display: block; */
 }
 
 .work-image-container-large{
@@ -924,11 +924,11 @@ main{
 }
 
 .work-text-container-small{
-  height: auto;
+  /* height: auto;
   width: auto;
   max-width: 50%;
   max-height: 50%;
-  position: relative;
+  position: relative; */
 }
 
 img.animated-gif{
@@ -979,10 +979,10 @@ img{
   display: block;
 }
 
-
+/* 
 .column-work{
-  display: inline-block
-}
+  display: inline-block;
+} */
 
 
 .intro-section{
