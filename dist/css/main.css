@@ -981,7 +981,7 @@ img{
 
 
 .column-work{
-  display: flex;
+  display: inline-block
 }
 
 
